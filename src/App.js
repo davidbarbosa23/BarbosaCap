@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <code>
-          Test FiraCode: ->
+          Test FiraCode: -> <-
         </code>
       </header>
     </div>
