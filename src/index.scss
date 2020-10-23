@@ -1,0 +1,25 @@
+@import './assets/scss/variables';
+@import './assets/scss/Fonts';
+@import '~bootstrap';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, .code {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+  font-feature-settings: "calt" 1; /* Enable Fira Code ligatures for IE 10+, Edge */
+  text-rendering: optimizeLegibility; /* Force Fira Code ligatures for Webkit, Blink, Gecko */
+  width: 30em;
+  margin: 5em auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
