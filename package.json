@@ -2,8 +2,10 @@
   "name": "barbosacap",
   "version": "0.1.0",
   "private": true,
+  "author": "David Barbosa",
   "homepage": "https://barbosacap.com",
   "dependencies": {
+    "@storybook/react": "^6.0.26",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,13 +13,18 @@
     "@types/node": "^12.19.1",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.6",
+    "bootstrap": "^4.5.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1"
   },
   "scripts": {
     "predeploy": "npm run build && echo barbosacap.com > ./build/CNAME",
