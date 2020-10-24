@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './config/i18n';
+
 import './index.scss';
+
+import App from './components/App';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={null}>
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/:locale' component={App} />
+            <Redirect to='/en' />
+          </Switch>
+        </BrowserRouter>
+      </I18nextProvider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
