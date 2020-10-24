@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 import AppLangs from 'config/AppLangs';
 
 // Components
-// import Home from './Home';
 const Home = React.lazy(() => import('./Home'));
 const Projects = React.lazy(() => import('./Projects'));
 const NotFound = React.lazy(() => import('./NotFound'));
