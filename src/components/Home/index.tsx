@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AppLayout } from './../Layouts/AppLayout';
+import { AppLayout } from 'components/Layouts/AppLayout';
 
 import './Home.scss';
 
@@ -10,7 +10,9 @@ const Home: React.FC = () => {
 
   return (
     <AppLayout className='Home'>
-      {t('hello.label')}
+      <h1>
+        {t('home.title')}
+      </h1>
       <code>-&gt;</code>
     </AppLayout>
   );

@@ -1,5 +1,9 @@
 {
-    "hello.label": "Hola",
+  "lang": "es",
 
-    "projects.title": "Proyectos"
+  "home.menu": "Inicio",
+  "home.title": "Inicio",
+
+  "projects.menu": "Proyectos",
+  "projects.title": "Proyectos"
 }
