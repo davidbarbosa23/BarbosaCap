@@ -39,9 +39,7 @@
     "predeploy": "npm run build && echo barbosacap.com > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "run-script-os",
-    "build:darwin:linux": "react-scripts build && cp build/index.html build/404.html",
-    "build:win32": "react-scripts build && powershell -Command \"Copy-Item build/index.html build/404.html\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
