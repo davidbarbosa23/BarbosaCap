@@ -1,7 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import './LangSelector.scss';
+const Navbar: React.FC = () => (
+  <nav className='Navbar'>
+    <LangSelector />
+  </nav>
+);
 
 const LangSelector: React.FC = () => {
   const { i18n } = useTranslation();
@@ -19,4 +23,4 @@ const LangSelector: React.FC = () => {
   );
 };
 
-export default LangSelector;
+export default Navbar;
