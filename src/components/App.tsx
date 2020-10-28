@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
-import {
-  Route,
-  Switch,
-  Redirect,
-  RouteComponentProps,
-  useParams,
-} from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+import { Route, Switch, Redirect, RouteComponentProps, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import AppLangs from 'config/AppLangs';
 
@@ -28,13 +23,16 @@ const App: React.FC<RouteComponentProps> = (props) => {
   }, [params.locale]);
 
   return (
-    <Switch>
-      {params.locale in AppLangs ? '' : <Redirect to='/en' />}
+    <Fragment>
+      <Helmet htmlAttributes={{ lang: params.locale ?? 'en' }} />
+      <Switch>
+        {params.locale in AppLangs ? '' : <Redirect to='/en' />}
 
-      <Route path={`${props.match.url}/`} exact component={Home} />
-      <Route path={`${props.match.url}/projects`} exact component={Projects} />
-      <Route component={NotFound} />
-    </Switch>
+        <Route path={`${props.match.url}/`} exact component={Home} />
+        <Route path={`${props.match.url}/projects`} exact component={Projects} />
+        <Route component={NotFound} />
+      </Switch>
+    </Fragment>
   );
 };
 

@@ -6,7 +6,9 @@ import './NotFound.scss';
 
 const NotFound: React.FC = () => (
   <AppLayout className='NotFound'>
-    <h1>PageNotFound Component</h1>
+    <div className='container'>
+      <h1>PageNotFound Component</h1>
+    </div>
   </AppLayout>
 );
 
