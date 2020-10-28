@@ -9,7 +9,9 @@ const Projects: React.FC = () => {
   const { t } = useTranslation();
   return (
     <AppLayout className='Projects'>
-      <h1>{t('projects.title')}</h1>
+      <div className='container'>
+        <h1>{t('projects.title')}</h1>
+      </div>
     </AppLayout>
   );
 };

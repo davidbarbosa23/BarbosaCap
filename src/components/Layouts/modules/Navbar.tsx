@@ -7,10 +7,10 @@ import AppLangs from 'config/AppLangs';
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <nav className='Navbar'>
-      <LangSelector />
+    <nav className='navbar'>
       <Link to={`/${t('lang')}`}>{t('home.menu')}</Link>
       <Link to={`/${t('lang')}/projects`}>{t('projects.menu')}</Link>
+      <LangSelector />
     </nav>
   );
 };
@@ -19,7 +19,7 @@ const LangSelector: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div className='LangSelector'>
+    <div className='lang-selector'>
       {Object.entries(AppLangs).map(([key, value], index) => {
         return (
           <Link key={index} to={langUrl(key, location.pathname)}>

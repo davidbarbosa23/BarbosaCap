@@ -10,10 +10,10 @@ const Home: React.FC = () => {
 
   return (
     <AppLayout className='Home'>
-      <h1>
-        {t('home.title')}
-      </h1>
-      <code>-&gt;</code>
+      <div className='container'>
+        <h1>{t('home.title')}</h1>
+        <code>-&gt;</code>
+      </div>
     </AppLayout>
   );
 };

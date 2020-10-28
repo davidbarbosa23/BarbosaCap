@@ -1,14 +1,13 @@
 import React, { Fragment } from 'react';
-import Navbar from './modules/Navbar';
+import Header from './modules/Header';
+import Footer from './modules/Footer';
 
 interface IAppLayout extends React.FC<{ className?: string }> {}
 
 export const AppLayout: IAppLayout = ({ children, className }) => (
   <Fragment>
-    <header>
-      <Navbar />
-    </header>
+    <Header />
     <main className={className}>{children}</main>
-    <footer></footer>
+    <Footer />
   </Fragment>
 );
