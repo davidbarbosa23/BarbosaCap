@@ -10,6 +10,12 @@
   box-sizing: border-box;
 }
 
+::-moz-selection,
+::selection {
+  color: unset;
+  background: #404859;
+}
+
 html,
 body,
 #root {
@@ -53,10 +59,8 @@ code,
   display: block;
   margin-left: 3rem;
 
-  // width: 30em;
-  // margin: 5em auto;
-  // white-space: pre-wrap;
-  // word-break: break-all;
+  white-space: pre-wrap;
+  word-break: break-all;
 
   .code-l {
     z-index: 1;
@@ -75,10 +79,10 @@ code,
       width: 400%;
       left: -100%;
       position: absolute;
-      content: "";
+      content: '';
       height: 100%;
       z-index: -2;
-  }
+    }
   }
   .methods {
     color: #cc5aee;
@@ -119,9 +123,15 @@ code,
   }
 }
 @keyframes blink {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 // Sticky footer
