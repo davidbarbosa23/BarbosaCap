@@ -13,7 +13,7 @@ const AboutMe: React.FC = () => {
         <CodeContainer>
           <CodeLine>
             <div className='methods'>class</div>{' '}
-            <span className='propname'>BarbosaCap</span> {'{'}
+            <span className='propname'>{process.env.REACT_APP_NAME}</span> {'{'}
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
@@ -24,7 +24,7 @@ const AboutMe: React.FC = () => {
             <span className='propname'>this</span>.
             <span className='proplabel'>name</span>{' '}
             <span className='scope'>=</span>{' '}
-            <span className='string'>'David Barbosa'</span>;
+            <span className='string'>'{process.env.REACT_APP_FULLNAME}'</span>;
           </CodeLine>
           <CodeLine>
             <div className='dot'>····</div>
@@ -38,7 +38,7 @@ const AboutMe: React.FC = () => {
             <span className='propname'>this</span>.
             <span className='proplabel'>email</span>{' '}
             <span className='scope'>=</span>{' '}
-            <span className='string'>'davidbarbosa.dev@gmail.com'</span>;
+            <span className='string'>'{process.env.REACT_APP_EMAIL}'</span>;
           </CodeLine>
           <CodeLine>
             <div className='dot'>····</div>

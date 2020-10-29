@@ -2,6 +2,10 @@
   "lang": "es",
 
   "home.menu": "Inicio",
+
+  "home.prologue.title": "Hola!, Soy David Barbosa, Desarrollador de Software/Web",
+  "home.prologue.desc": "Home",
+
   "home.about.title": "Acerca de mi",
   "home.about.code.desc": "Desarrollador de software, enfocado en aplicaciones web",
   "home.about.code.exp": "Experiencia",
@@ -17,6 +21,7 @@
   "home.about.code.skills": "Habilidades",
 
   "projects.menu": "Proyectos",
+
   "projects.title": "Proyectos",
 
   "share": "Compartir"

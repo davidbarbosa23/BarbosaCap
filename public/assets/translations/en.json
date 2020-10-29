@@ -2,6 +2,10 @@
   "lang": "en",
 
   "home.menu": "Home",
+
+  "home.prologue.title": "Hi!, I'm David Barbosa, Software/Web Developer",
+  "home.prologue.desc": "Home",
+
   "home.about.title": "About me",
   "home.about.code.desc": "Software developer, focused on web applications",
   "home.about.code.exp": "Experience",
@@ -17,6 +21,7 @@
   "home.about.code.skills": "Skills",
 
   "projects.menu": "Projects",
+
   "projects.title": "Projects",
 
   "share": "Share"

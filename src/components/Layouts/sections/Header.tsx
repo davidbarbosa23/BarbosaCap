@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <Link to='/' className='brand'>
-        <img src={Logo} alt='BarbosaCap Logo' />
+        <img src={Logo} alt={`${process.env.REACT_APP_NAME} Logo`} />
       </Link>
       <Navbar />
     </header>
