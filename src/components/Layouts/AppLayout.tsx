@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Header from './modules/Header';
-import Footer from './modules/Footer';
+import Header from './sections/Header';
+import Footer from './sections/Footer';
 
 interface IAppLayout extends React.FC<{ className?: string }> {}
 
