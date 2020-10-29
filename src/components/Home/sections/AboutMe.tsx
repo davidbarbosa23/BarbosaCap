@@ -1,25 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-let lineCounter = 0;
-const CodeLine: React.FC = ({ children }) => {
-  const [lineID, setLineID] = useState(lineCounter);
-
-  useEffect(() => {
-    lineCounter += 1;
-    setLineID(lineCounter);
-    return () => {
-      lineCounter = 0;
-      setLineID(lineCounter);
-    };
-  }, []);
-
-  return (
-    <div data-line-nr={lineID} className='code-l'>
-      {children}{' '}
-    </div>
-  );
-};
+import { CodeLine, CodeContainer } from 'components/Layouts/modules/CodeModule';
 
 const AboutMe: React.FC = () => {
   const { t } = useTranslation();
@@ -28,17 +10,11 @@ const AboutMe: React.FC = () => {
     <section className='about-me'>
       <div className='container'>
         <h1>{t('home.about.title')}</h1>
-        <code>
+        <CodeContainer>
           <CodeLine>
             <div className='methods'>class</div>{' '}
             <span className='propname'>BarbosaCap</span> {'{'}
           </CodeLine>
-          {/* <CodeLine>
-            <div className='dot'>··</div>
-            <div className='comment'>
-              // My vast variety of skills is continuously expanding.
-            </div>
-          </CodeLine> */}
           <CodeLine>
             <div className='dot'>··</div>
             <div className='methods'>constructor</div>() {'{'}
@@ -69,9 +45,7 @@ const AboutMe: React.FC = () => {
             <span className='propname'>this</span>.
             <span className='proplabel'>description</span>{' '}
             <span className='scope'>=</span>{' '}
-            <span className='string'>
-              'Software developer, focused on web applications'
-            </span>;
+            <span className='string'>'{t('home.about.code.desc')}'</span>;
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
@@ -79,18 +53,22 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
+            <div className='comment'>// {t('home.about.code.exp')}</div>
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>··</div>
             <span className='function'>workExperience</span>() {'{'}
           </CodeLine>
           <CodeLine>
             <div className='dot'>····</div>
-            <div className='methods'>return</div> [{' '}
+            <div className='methods'>return</div> [
           </CodeLine>
           <CodeLine>
             <div className='dot'>······</div>
             {'{'} <span className='string'>'2019-2020'</span> :
             <span className='string'>
               {' '}
-              'Software Engineer at Quantun Connexion'
+              '{t('home.about.code.exp5')} Quantun Connexion'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -99,7 +77,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2018-2019'</span> :
             <span className='string'>
               {' '}
-              'Web Developer at Tradeview Ltd. / iLikeWebSites.com'
+              '{t('home.about.code.exp4')} Tradeview Ltd. / iLikeWebSites.com'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -108,7 +86,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2016-2018'</span> :
             <span className='string'>
               {' '}
-              'Web Designer at Tradeview Ltd. / iLikeWebSites.com'
+              '{t('home.about.code.exp3')} Tradeview Ltd. / iLikeWebSites.com'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -117,7 +95,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2015-2016'</span> :
             <span className='string'>
               {' '}
-              'Web Designer at Rampa Marketing Digital'
+              '{t('home.about.code.exp2')} Rampa Marketing Digital'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -126,7 +104,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2015-2015'</span> :
             <span className='string'>
               {' '}
-              'Web Designer at Data Solutions Group'
+              '{t('home.about.code.exp1')} Data Solutions Group'
             </span>{' '}
             {'}'}
           </CodeLine>
@@ -139,18 +117,22 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
+            <div className='comment'>// {t('home.about.code.edu')}</div>
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>··</div>
             <span className='function'>education</span>() {'{'}
           </CodeLine>
           <CodeLine>
             <div className='dot'>····</div>
-            <div className='methods'>return</div> [{' '}
+            <div className='methods'>return</div> [
           </CodeLine>
           <CodeLine>
             <div className='dot'>······</div>
             {'{'} <span className='string'>'2017-2017'</span> :
             <span className='string'>
               {' '}
-              'Web development introduction - Google Actívate'
+              '{t('home.about.code.edu3')} - Google Actívate'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -159,7 +141,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2013-2016'</span> :
             <span className='string'>
               {' '}
-              'Graphic Designer - Escuela de Artes y Letras'
+              '{t('home.about.code.edu2')} - Escuela de Artes y Letras'
             </span>{' '}
             {'}'},
           </CodeLine>
@@ -168,7 +150,7 @@ const AboutMe: React.FC = () => {
             {'{'} <span className='string'>'2011-2011'</span> :
             <span className='string'>
               {' '}
-              'Projects development for applications in Engineering - SENA'
+              '{t('home.about.code.edu1')} - SENA'
             </span>{' '}
             {'}'}
           </CodeLine>
@@ -178,6 +160,10 @@ const AboutMe: React.FC = () => {
           <CodeLine>
             <div className='dot'>··</div>
             {'}'}
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>··</div>
+            <div className='comment'>// {t('home.about.code.skills')}</div>
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
@@ -208,7 +194,7 @@ const AboutMe: React.FC = () => {
             {'}'}
           </CodeLine>
           <CodeLine>{'}'}</CodeLine>
-        </code>
+        </CodeContainer>
       </div>
     </section>
   );
