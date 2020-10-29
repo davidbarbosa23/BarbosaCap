@@ -1,15 +1,54 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ReactComponent as IconEmail } from 'assets/img/icon_email.svg';
+import { ReactComponent as IconGithub } from 'assets/img/icon_github.svg';
+import { ReactComponent as IconLinkedin } from 'assets/img/icon_linkedin.svg';
 import ProfilePic from 'assets/img/profile_picture.jpg';
 
 const Prologue: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className='Prologue'>
-      <h1>{t('home.menu')}</h1>
-      <img src={ProfilePic} alt='Profile - BarbosaCap' />
+    <section className='Prologue container'>
+      <div className='content'>
+        <img src={ProfilePic} alt={`${process.env.REACT_APP_NAME} Profile`} />
+        <div className='body'>
+          <h1>{t('home.prologue.title')}</h1>
+        </div>
+        <ul className='social'>
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`https://www.linkedin.com/in/${process.env.REACT_APP_SOCIAL_LINKEDIN}`}
+              title={`in/${process.env.REACT_APP_SOCIAL_LINKEDIN}`}
+            >
+              <IconLinkedin />
+            </a>
+          </li>
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`https://github.com/${process.env.REACT_APP_SOCIAL_GITHUB}`}
+              title={`${process.env.REACT_APP_SOCIAL_GITHUB}`}
+            >
+              <IconGithub />
+            </a>
+          </li>
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`mailto:${process.env.REACT_APP_EMAIL}`}
+              title={`${process.env.REACT_APP_EMAIL}`}
+            >
+              <IconEmail />
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
