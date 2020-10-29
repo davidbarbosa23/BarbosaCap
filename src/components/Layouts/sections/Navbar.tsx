@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     <nav className='navbar'>
       <ul>
         <NavItem to={`/${t('lang')}`} content={t('home.menu')} />
-        <NavItem to={`/${t('lang')}/projects`} content={t('projects.menu')} />
+        {/* <NavItem to={`/${t('lang')}/projects`} content={t('projects.menu')} /> */}
         <NavItem to={null} className={'lang-button'} icon={flags[t('lang')]}>
           <LangSelector />
         </NavItem>
