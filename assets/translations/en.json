@@ -3,6 +3,18 @@
 
   "home.menu": "Home",
   "home.about.title": "About me",
+  "home.about.code.desc": "Software developer, focused on web applications",
+  "home.about.code.exp": "Experience",
+  "home.about.code.exp1": "Web Designer at",
+  "home.about.code.exp2": "Web Designer at",
+  "home.about.code.exp3": "Web Designer at",
+  "home.about.code.exp4": "Web Developer at",
+  "home.about.code.exp5": "Software Engineer at",
+  "home.about.code.edu": "Education",
+  "home.about.code.edu1": "Projects development for applications in Engineering",
+  "home.about.code.edu2": "Graphic Design",
+  "home.about.code.edu3": "Web development introduction",
+  "home.about.code.skills": "Skills",
 
   "projects.menu": "Projects",
   "projects.title": "Projects",

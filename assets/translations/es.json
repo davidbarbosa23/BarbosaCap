@@ -3,6 +3,18 @@
 
   "home.menu": "Inicio",
   "home.about.title": "Acerca de mi",
+  "home.about.code.desc": "Desarrollador de software, enfocado en aplicaciones web",
+  "home.about.code.exp": "Experiencia",
+  "home.about.code.exp1": "Diseñador Web en",
+  "home.about.code.exp2": "Diseñador Web en",
+  "home.about.code.exp3": "Diseñador Web en",
+  "home.about.code.exp4": "Desarrollador Web en",
+  "home.about.code.exp5": "Ingeniero de Software en",
+  "home.about.code.edu": "Educación",
+  "home.about.code.edu1": "Desarrollo de proyectos para apropiación de conceptos con aplicaciones en Ingeniería",
+  "home.about.code.edu2": "Diseño Gráfico",
+  "home.about.code.edu3": "Introducción al Desarrollo Web",
+  "home.about.code.skills": "Habilidades",
 
   "projects.menu": "Proyectos",
   "projects.title": "Proyectos",
