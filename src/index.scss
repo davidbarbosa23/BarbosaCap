@@ -13,7 +13,7 @@
 ::-moz-selection,
 ::selection {
   color: unset;
-  background: #404859;
+  background: rgba(64, 72, 89, 1);
 }
 
 html,
@@ -160,6 +160,9 @@ header {
 
   z-index: 99;
 
+  position: fixed;
+  width: 100%;
+
   .brand {
     width: 10rem;
   }
@@ -268,11 +271,18 @@ header {
 }
 main {
   .container {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
   }
 }
 footer {
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+button {
+  &:focus {
+    outline: 0;
+  }
 }
