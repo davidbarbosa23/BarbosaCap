@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9908e9b94a1c87ee766f313a2272a330",
+    "revision": "63715a43887e8c06bce4940031523b28",
     "url": "https://barbosacap.com/index.html"
   },
   {
-    "revision": "3d1dd2309ad29d452055",
+    "revision": "fe989a4fe18ae0758b3e",
     "url": "https://barbosacap.com/static/css/3.bc6988c5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://barbosacap.com/static/css/5.3af52d21.chunk.css"
   },
   {
-    "revision": "a1e46a1dcf24a7b69eb2",
-    "url": "https://barbosacap.com/static/css/main.6da704b0.chunk.css"
+    "revision": "408d4b9b094648af2ddc",
+    "url": "https://barbosacap.com/static/css/main.d7effc6d.chunk.css"
   },
   {
     "revision": "6880141f6d6350ee1805",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://barbosacap.com/static/js/2.72a8b85a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3d1dd2309ad29d452055",
-    "url": "https://barbosacap.com/static/js/3.6ccf2a1e.chunk.js"
+    "revision": "fe989a4fe18ae0758b3e",
+    "url": "https://barbosacap.com/static/js/3.223685c3.chunk.js"
   },
   {
     "revision": "f9a6dc549b02a2be6265",
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://barbosacap.com/static/js/5.debf10d6.chunk.js"
   },
   {
-    "revision": "a1e46a1dcf24a7b69eb2",
+    "revision": "408d4b9b094648af2ddc",
     "url": "https://barbosacap.com/static/js/main.1c318c2e.chunk.js"
   },
   {
-    "revision": "0a7fec0c92dc948fd416",
-    "url": "https://barbosacap.com/static/js/runtime-main.555b7c0d.js"
+    "revision": "b15282829eeb4b714c74",
+    "url": "https://barbosacap.com/static/js/runtime-main.6a60160b.js"
   },
   {
     "revision": "b4f91411d5941e961ec1262bdf02a062",
