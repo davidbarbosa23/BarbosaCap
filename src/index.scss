@@ -276,6 +276,11 @@ main {
     max-width: 1400px;
     margin: 0 auto;
   }
+  @media (max-width: 800px) {
+    .container {
+      padding: 1.5rem;
+    }
+  }
 }
 footer {
   padding: 3rem 2rem;

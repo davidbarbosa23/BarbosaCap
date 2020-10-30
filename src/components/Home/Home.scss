@@ -24,12 +24,14 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
+
       .body {
         min-height: 50vh;
         padding: 2rem 8rem 2rem 12rem;
         display: flex;
         align-items: center;
       }
+
       .social {
         list-style: none;
         margin: 0;
@@ -40,7 +42,7 @@
         transform: translate(50%, -50%);
 
         li {
-          padding: 0.5rem 0;
+          padding: 0.3rem 0;
 
           a {
             position: relative;
@@ -56,14 +58,50 @@
             }
 
             svg {
-              height: 3.5rem;
-              width: 4rem;
+              height: 2.5rem;
+              width: 3rem;
               color: white;
               fill: white;
               display: block;
             }
           }
         }
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .content {
+        width: calc(100% - 12rem);
+        img {
+          max-width: 13rem;
+        }
+        .body {
+          padding-left: 8rem;
+          padding-right: 4rem;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        width: calc(100% - 6rem);
+        margin-top: 6rem;
+        img {
+          left: 50%;
+          top: 0;
+        }
+        .body {
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 7rem;
+        }
+      }
+    }
+
+    @media (max-width: 490px) {
+      .content {
+        width: calc(100% - 2rem);
+        margin-left: 0;
       }
     }
   }
