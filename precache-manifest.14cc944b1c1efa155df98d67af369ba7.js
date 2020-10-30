@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fc3bd46c35245e08ab59328382ba55ae",
+    "revision": "1036e5aa56fb38562476de1882012407",
     "url": "https://barbosacap.com/index.html"
   },
   {
