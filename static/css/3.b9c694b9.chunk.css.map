@@ -1,1 +1,0 @@
-{"version":3,"sources":["Home.scss"],"names":[],"mappings":"AAAA,gBAEI,4BAA6B,CAFjC,eAKI,kCAAuC","file":"3.b9c694b9.chunk.css","sourcesContent":[".Home {\r\n  .Prologue {\r\n    height: calc(100vh - 5.75rem);\r\n  }\r\n  .AboutMe {\r\n    background-color: rgba(40, 44, 52, 0.5);    \r\n  }\r\n}\r\n"]}
