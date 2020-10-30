@@ -10,7 +10,10 @@
   box-sizing: border-box;
 }
 
-::-moz-selection,
+::-moz-selection {
+  color: unset;
+  background: rgba(64, 72, 89, 1);
+}
 ::selection {
   color: unset;
   background: rgba(64, 72, 89, 1);

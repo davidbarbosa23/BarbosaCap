@@ -43,6 +43,20 @@ const AboutMe: React.FC = () => {
           <CodeLine>
             <div className='dot'>····</div>
             <span className='propname'>this</span>.
+            <span className='proplabel'>phone</span>{' '}
+            <span className='scope'>=</span>{' '}
+            <span className='number'>{process.env.REACT_APP_PHONE}</span>;
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>····</div>
+            <span className='propname'>this</span>.
+            <span className='proplabel'>location</span>{' '}
+            <span className='scope'>=</span>{' '}
+            <span className='string'>'{process.env.REACT_APP_LOCATION}'</span>;
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>····</div>
+            <span className='propname'>this</span>.
             <span className='proplabel'>description</span>{' '}
             <span className='scope'>=</span>{' '}
             <span className='string'>'{t('home.about.code.desc')}'</span>;
