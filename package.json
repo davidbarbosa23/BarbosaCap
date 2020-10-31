@@ -10,6 +10,7 @@
   "homepage": "https://barbosacap.com",
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "firebase": "^8.0.0",
     "i18next": "^19.8.2",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-xhr-backend": "^3.2.2",
