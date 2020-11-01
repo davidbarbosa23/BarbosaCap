@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch, Redirect, RouteComponentProps, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +23,7 @@ const App: React.FC<RouteComponentProps> = (props) => {
   }, [params.locale]);
 
   return (
-    <Fragment>
+    <>
       <Helmet htmlAttributes={{ lang: params.locale ?? 'en' }} />
       <Switch>
         {params.locale in AppLangs ? '' : <Redirect to='/en' />}
@@ -32,7 +32,7 @@ const App: React.FC<RouteComponentProps> = (props) => {
         <Route path={`${props.match.url}/projects`} exact component={Projects} />
         <Route component={NotFound} />
       </Switch>
-    </Fragment>
+    </>
   );
 };
 
