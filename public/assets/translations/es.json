@@ -32,5 +32,8 @@
   "name": "Nombre",
   "email": "Correo Electrónico",
   "message": "Mensaje",
-  "submit": "Enviar"
+  "submit": "Enviar",
+
+  "toast.success.attempt": "¡Enviado satisfactoriamente!",
+  "toast.fail.attempt": "Ocurrió un error inesperado"
 }

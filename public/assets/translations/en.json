@@ -32,5 +32,8 @@
   "name": "Name",
   "email": "Email",
   "message": "Message",
-  "submit": "Submit"
+  "submit": "Submit",
+
+  "toast.success.attempt": "Successfully sent!",
+  "toast.fail.attempt": "Something bad happened :("
 }

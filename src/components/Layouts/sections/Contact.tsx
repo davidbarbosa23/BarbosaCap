@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+import { useForm } from 'react-hook-form';
 import { CSSTransition } from 'react-transition-group';
 import { db } from 'config/Firebase';
 
@@ -10,32 +12,20 @@ interface ContactData {
   email: string;
   message: string;
 }
-// TODO: Toastify, Validation
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const { contactShow, setContactShow } = UseContactShow();
   const nodeRef = React.useRef(null);
 
-  const initialState: ContactData = {
-    name: '',
-    email: '',
-    message: '',
-  };
-  const [contactData, setContactData] = useState(initialState);
+  const { handleSubmit, register, errors } = useForm<ContactData>();
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (saveContact(contactData)) {
-      setContactData(initialState);
+  const onSubmit = (values: ContactData) => {
+    if (saveContact(values)) {
       if (setContactShow) setContactShow(false);
+      toast.success(t('toast.success.attempt'));
+    } else {
+      toast.error(t('toast.fail.attempt'));
     }
-  };
-
-  const handleInput = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setContactData({ ...contactData, [name]: value });
   };
 
   const saveContact = async (data: ContactData) => {
@@ -77,14 +67,14 @@ const Contact: React.FC = () => {
                 <span></span>
               </div>
               <h3>{t('contact.title')}</h3>
-              <form action='' onSubmit={onSubmit}>
+              <form action='' onSubmit={handleSubmit(onSubmit)}>
                 <div className='input '>
                   <input
                     id='name'
                     name='name'
+                    className={errors.name && 'invalid'}
                     type='text'
-                    onChange={handleInput}
-                    value={contactData.name}
+                    ref={register({ required: true, maxLength: 80 })}
                   />
                   <label htmlFor='name'>{t('name')}</label>
                 </div>
@@ -92,9 +82,15 @@ const Contact: React.FC = () => {
                   <input
                     id='email'
                     name='email'
+                    className={errors.email && 'invalid'}
                     type='email'
-                    onChange={handleInput}
-                    value={contactData.email}
+                    ref={register({
+                      required: 'Required',
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'invalid email address',
+                      },
+                    })}
                   />
                   <label htmlFor='email'>{t('email')}</label>
                 </div>
@@ -102,8 +98,8 @@ const Contact: React.FC = () => {
                   <textarea
                     id='message'
                     name='message'
-                    onChange={handleInput}
-                    value={contactData.message}
+                    className={errors.message && 'invalid'}
+                    ref={register({ required: true })}
                   />
                   <label htmlFor='message'>{t('message')}</label>
                 </div>
