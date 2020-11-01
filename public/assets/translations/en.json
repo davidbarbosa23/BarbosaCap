@@ -2,11 +2,17 @@
   "lang": "en",
 
   "home.menu": "Home",
+  "projects.menu": "Projects",
+  "contact.menu": "Contact",
+
+  "contact.title": "Contact",
+  "contact.about.desc": "Backend web developer, pragmatic, competent, adaptable. Always creating practical solutions to inquiries; characterized by being a responsible, enthusiastic person, with sense of leadership and teamwork. Permanent searching to acquire new knowledge and experiences.",
+
+  "about.title": "About me",
 
   "home.prologue.title": "Hi!, <br />I'm David Barbosa, <br />Software/Web Developer",
   "home.prologue.desc": "Home",
-
-  "home.about.title": "About me",
+  "home.prologue.btn": "Contact me!",
   "home.about.code.desc": "Software developer, focused on web applications",
   "home.about.code.exp": "Experience",
   "home.about.code.exp1": "Web Designer at",
@@ -20,9 +26,11 @@
   "home.about.code.edu3": "Web development introduction",
   "home.about.code.skills": "Skills",
 
-  "projects.menu": "Projects",
-
   "projects.title": "Projects",
 
-  "share": "Share"
+  "share": "Share",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Submit"
 }

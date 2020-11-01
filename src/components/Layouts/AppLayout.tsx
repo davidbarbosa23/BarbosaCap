@@ -1,13 +1,21 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Header from './sections/Header';
 import Footer from './sections/Footer';
+import Contact from './sections/Contact';
 
-interface IAppLayout extends React.FC<{ className?: string }> {}
+/** Context */
+import { ContactProvider } from 'context/contact.context';
 
-export const AppLayout: IAppLayout = ({ children, className }) => (
-  <Fragment>
-    <Header />
-    <main className={className}>{children}</main>
-    <Footer />
-  </Fragment>
-);
+export const AppLayout: React.FC<{ className?: string }> = ({
+  children,
+  className,
+}) => {
+  return (
+    <ContactProvider>
+      <Header />
+      <main className={className}>{children}</main>
+      <Footer />
+      <Contact />
+    </ContactProvider>
+  );
+};

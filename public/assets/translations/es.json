@@ -2,11 +2,17 @@
   "lang": "es",
 
   "home.menu": "Inicio",
+  "projects.menu": "Proyectos",
+  "contact.menu": "Contacto",
+
+  "contact.title": "Contacto",
+  "contact.about.desc": "Desarrollador backend de servicios web, pragmático, competente, adaptablealmedio,creando soluciones prácticas a problemas planteados; caracterizado por ser una persona responsable, entusiasta, con un amplio sentido de liderazgo y trabajo en equipo, en la búsqueda permanente de adquirir nuevos conocimientos y experiencias.",
+
+  "about.title": "Acerca de mi",
 
   "home.prologue.title": "Hola!, <br />Soy David Barbosa, <br />Desarrollador de Software/Web",
   "home.prologue.desc": "Home",
-
-  "home.about.title": "Acerca de mi",
+  "home.prologue.btn": "¡Contáctame!",
   "home.about.code.desc": "Desarrollador de software, enfocado en aplicaciones web",
   "home.about.code.exp": "Experiencia",
   "home.about.code.exp1": "Diseñador Web en",
@@ -20,9 +26,11 @@
   "home.about.code.edu3": "Introducción al Desarrollo Web",
   "home.about.code.skills": "Habilidades",
 
-  "projects.menu": "Proyectos",
-
   "projects.title": "Proyectos",
 
-  "share": "Compartir"
+  "share": "Compartir",
+  "name": "Nombre",
+  "email": "Correo Electrónico",
+  "message": "Mensaje",
+  "submit": "Enviar"
 }
