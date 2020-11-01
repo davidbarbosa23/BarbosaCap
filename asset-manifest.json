@@ -2,7 +2,7 @@
   "files": {
     "static/js/0.71e6fcaf.chunk.js": "https://barbosacap.com/static/js/0.71e6fcaf.chunk.js",
     "static/js/0.71e6fcaf.chunk.js.map": "https://barbosacap.com/static/js/0.71e6fcaf.chunk.js.map",
-    "main.css": "https://barbosacap.com/static/css/main.6cdf8288.chunk.css",
+    "main.css": "https://barbosacap.com/static/css/main.d1378304.chunk.css",
     "main.js": "https://barbosacap.com/static/js/main.0d721834.chunk.js",
     "main.js.map": "https://barbosacap.com/static/js/main.0d721834.chunk.js.map",
     "runtime-main.js": "https://barbosacap.com/static/js/runtime-main.ac12e64f.js",
@@ -19,12 +19,12 @@
     "static/js/6.ac39f766.chunk.js": "https://barbosacap.com/static/js/6.ac39f766.chunk.js",
     "static/js/6.ac39f766.chunk.js.map": "https://barbosacap.com/static/js/6.ac39f766.chunk.js.map",
     "index.html": "https://barbosacap.com/index.html",
-    "precache-manifest.f6352235913fc1b238053421900d000b.js": "https://barbosacap.com/precache-manifest.f6352235913fc1b238053421900d000b.js",
+    "precache-manifest.18937bdaff25ce77f295dbf85e19f346.js": "https://barbosacap.com/precache-manifest.18937bdaff25ce77f295dbf85e19f346.js",
     "service-worker.js": "https://barbosacap.com/service-worker.js",
     "static/css/4.bc6988c5.chunk.css.map": "https://barbosacap.com/static/css/4.bc6988c5.chunk.css.map",
     "static/css/5.785082e3.chunk.css.map": "https://barbosacap.com/static/css/5.785082e3.chunk.css.map",
     "static/css/6.3af52d21.chunk.css.map": "https://barbosacap.com/static/css/6.3af52d21.chunk.css.map",
-    "static/css/main.6cdf8288.chunk.css.map": "https://barbosacap.com/static/css/main.6cdf8288.chunk.css.map",
+    "static/css/main.d1378304.chunk.css.map": "https://barbosacap.com/static/css/main.d1378304.chunk.css.map",
     "static/js/0.71e6fcaf.chunk.js.LICENSE.txt": "https://barbosacap.com/static/js/0.71e6fcaf.chunk.js.LICENSE.txt",
     "static/js/3.ef9f2ad7.chunk.js.LICENSE.txt": "https://barbosacap.com/static/js/3.ef9f2ad7.chunk.js.LICENSE.txt",
     "static/media/index.scss": "https://barbosacap.com/static/media/bg_dark.b4f91411.jpg",
@@ -40,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.ac12e64f.js",
     "static/js/3.ef9f2ad7.chunk.js",
-    "static/css/main.6cdf8288.chunk.css",
+    "static/css/main.d1378304.chunk.css",
     "static/js/main.0d721834.chunk.js"
   ]
 }

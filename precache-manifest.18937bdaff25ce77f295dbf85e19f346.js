@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73d02d81fa173990f4799d4be4b1d868",
+    "revision": "8ef06e884e9e11855522daa3913e4785",
     "url": "https://barbosacap.com/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://barbosacap.com/static/css/6.3af52d21.chunk.css"
   },
   {
-    "revision": "b998099726cc330164b1",
-    "url": "https://barbosacap.com/static/css/main.6cdf8288.chunk.css"
+    "revision": "5904ad4c3d5801acd3d5",
+    "url": "https://barbosacap.com/static/css/main.d1378304.chunk.css"
   },
   {
     "revision": "91a6e568e9801343827b",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://barbosacap.com/static/js/6.ac39f766.chunk.js"
   },
   {
-    "revision": "b998099726cc330164b1",
+    "revision": "5904ad4c3d5801acd3d5",
     "url": "https://barbosacap.com/static/js/main.0d721834.chunk.js"
   },
   {
