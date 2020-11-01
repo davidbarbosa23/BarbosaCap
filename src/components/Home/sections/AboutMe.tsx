@@ -9,7 +9,7 @@ const AboutMe: React.FC = () => {
   return (
     <section className='AboutMe'>
       <div className='container'>
-        <h1>{t('home.about.title')}</h1>
+        <h1>{t('about.title')}</h1>
         <CodeContainer>
           <CodeLine>
             <div className='methods'>class</div>{' '}
