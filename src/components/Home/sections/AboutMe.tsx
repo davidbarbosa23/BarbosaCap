@@ -79,6 +79,15 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>······</div>
+            {'{'} <span className='string'>'2021-Current'</span> :
+            <span className='string'>
+              {' '}
+              '{t('home.about.code.exp6')} Mercado Libre'
+            </span>{' '}
+            {'}'},
+          </CodeLine>
+          <CodeLine>
+            <div className='dot'>······</div>
             {'{'} <span className='string'>'2019-2020'</span> :
             <span className='string'>
               {' '}
