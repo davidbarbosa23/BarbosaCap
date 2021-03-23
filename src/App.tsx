@@ -28,7 +28,7 @@ const App: React.FC<RouteComponentProps> = (props) => {
     <>
       <Helmet htmlAttributes={{ lang: params.locale ?? defaultLang }} />
       <Switch>
-        {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + params.locale}`} />}
+        {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' +  params.locale}`} />}
         {Routes.map(({ id, path, component }) => (
           <Route
             key={id}
