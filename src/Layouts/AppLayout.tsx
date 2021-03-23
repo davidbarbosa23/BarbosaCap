@@ -1,11 +1,11 @@
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
-import Header from './sections/Header';
-import Footer from './sections/Footer';
-import Contact from './sections/Contact';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Contact from 'components/Contact';
 
 /** Context */
-import { ContactProvider } from 'context/contact.context';
+import { ContactProvider } from 'contexts/contact';
 
 export const AppLayout: React.FC<{ className?: string }> = ({
   children,

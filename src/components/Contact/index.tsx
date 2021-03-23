@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { CSSTransition } from 'react-transition-group';
 import { db } from 'config/Firebase';
 
-import { UseContactShow } from 'context/contact.context';
+import { UseContactShow } from 'contexts/contact';
 
 interface ContactData {
   name: string;

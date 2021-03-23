@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppLayout } from 'components/Layouts/AppLayout';
+import { AppLayout } from 'Layouts/AppLayout';
 
 import './NotFound.scss';
 

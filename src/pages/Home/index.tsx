@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { AppLayout } from 'components/Layouts/AppLayout';
-import Prologue from './sections/Prologue';
-import AboutMe from './sections/AboutMe';
+import { AppLayout } from 'Layouts/AppLayout';
+import Prologue from './components/Prologue';
+import AboutMe from './components/AboutMe';
 
 import './Home.scss';
 

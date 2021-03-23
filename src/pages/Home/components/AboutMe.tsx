@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { CodeLine, CodeContainer } from 'components/Layouts/modules/CodeModule';
+import { CodeLine, CodeContainer } from 'components/CodeModule';
 
 const AboutMe: React.FC = () => {
   const { t } = useTranslation();
@@ -67,7 +67,9 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
-            <div className='comment'>// {t('home.about.code.exp')}</div>
+            <div className='comment'>
+              {'//'} {t('home.about.code.exp')}
+            </div>
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
@@ -140,7 +142,9 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
-            <div className='comment'>// {t('home.about.code.edu')}</div>
+            <div className='comment'>
+              {'//'} {t('home.about.code.edu')}
+            </div>
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
@@ -186,7 +190,9 @@ const AboutMe: React.FC = () => {
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>
-            <div className='comment'>// {t('home.about.code.skills')}</div>
+            <div className='comment'>
+              {'//'} {t('home.about.code.skills')}
+            </div>
           </CodeLine>
           <CodeLine>
             <div className='dot'>··</div>

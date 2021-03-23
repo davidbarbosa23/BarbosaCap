@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { UseContactShow } from 'context/contact.context';
+import { UseContactShow } from 'contexts/contact';
 
 import { ReactComponent as IconEmail } from 'assets/img/icon_email.svg';
 import { ReactComponent as IconGithub } from 'assets/img/icon_github.svg';
