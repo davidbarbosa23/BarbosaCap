@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { NavLink as Link } from 'react-router-dom';
+
+import useOutsideClick from 'helpers/useOutsideClick';
 
 import styles from './styles.module.scss';
 
@@ -13,16 +15,26 @@ interface INavItemProps {
 }
 const NavItem: React.FC<INavItemProps> = (props) => {
   const [childOpen, setChildOpen] = useState(false);
+  const refItem = useRef(null);
+
+  useOutsideClick(refItem, () => {
+    setChildOpen(false);
+  });
 
   return (
-    <li className={styles.navItem} onClick={() => setChildOpen(!childOpen)}>
+    <li ref={refItem} className={styles.navItem} onClick={() => setChildOpen(!childOpen)}>
       {props.to === null ? (
         <button className={props.className} onClick={props.clickHandler}>
           {props.icon}
           {props.content}
         </button>
       ) : (
-        <Link exact={true} activeClassName="active" className={props.className} to={props.to}>
+        <Link
+          exact={true}
+          activeClassName={styles.active}
+          className={props.className}
+          to={props.to}
+        >
           {props.icon}
           {props.content}
         </Link>
