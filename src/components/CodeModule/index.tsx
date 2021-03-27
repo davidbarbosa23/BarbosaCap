@@ -15,7 +15,7 @@ export const CodeLine: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <div data-line-nr={lineID} className='code-l'>
+    <div data-line-nr={lineID} className="code-l">
       {children}{' '}
     </div>
   );

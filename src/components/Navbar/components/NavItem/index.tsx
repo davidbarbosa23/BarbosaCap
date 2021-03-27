@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+
 import { NavLink as Link } from 'react-router-dom';
+
+import styles from './styles.module.scss';
 
 interface INavItemProps {
   to: string | null;
@@ -12,19 +15,14 @@ const NavItem: React.FC<INavItemProps> = (props) => {
   const [childOpen, setChildOpen] = useState(false);
 
   return (
-    <li className='nav-item' onClick={() => setChildOpen(!childOpen)}>
+    <li className={styles.navItem} onClick={() => setChildOpen(!childOpen)}>
       {props.to === null ? (
         <button className={props.className} onClick={props.clickHandler}>
           {props.icon}
           {props.content}
         </button>
       ) : (
-        <Link
-          exact={true}
-          activeClassName='active'
-          className={props.className}
-          to={props.to}
-        >
+        <Link exact={true} activeClassName="active" className={props.className} to={props.to}>
           {props.icon}
           {props.content}
         </Link>

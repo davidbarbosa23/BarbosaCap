@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
-import {
-  Route,
-  Switch,
-  Redirect,
-  RouteComponentProps,
-  useParams,
-} from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { Redirect, Route, RouteComponentProps, Switch, useParams } from 'react-router-dom';
+
 import AppLangs, { defaultLang } from 'config/AppLangs';
-import { Routes, NotFound } from 'config/Routes';
+import { NotFound, Routes } from 'config/Routes';
 
 interface IParams {
   locale: string;
@@ -28,14 +24,9 @@ const App: React.FC<RouteComponentProps> = (props) => {
     <>
       <Helmet htmlAttributes={{ lang: params.locale ?? defaultLang }} />
       <Switch>
-        {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' +  params.locale}`} />}
+        {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + params.locale}`} />}
         {Routes.map(({ id, path, component }) => (
-          <Route
-            key={id}
-            path={`${props.match.url}${path}`}
-            component={component}
-            exact
-          />
+          <Route key={id} path={`${props.match.url}${path}`} component={component} exact />
         ))}
         <Route component={NotFound} />
       </Switch>

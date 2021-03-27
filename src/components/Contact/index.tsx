@@ -1,8 +1,10 @@
 import React from 'react';
-import { toast } from 'react-toastify';
-import { useTranslation } from 'react-i18next';
+
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 import { CSSTransition } from 'react-transition-group';
+
 import { db } from 'config/Firebase';
 
 import { UseContactShow } from 'contexts/contact';
@@ -44,21 +46,21 @@ const Contact: React.FC = () => {
       nodeRef={nodeRef}
       in={contactShow}
       timeout={400}
-      classNames='modal-contact'
+      classNames="modal-contact"
       unmountOnExit
     >
-      <div className='modal-container'>
-        <div ref={nodeRef} className='container modal-contact'>
-          <div className='highlight'>
+      <div className="modal-container">
+        <div ref={nodeRef} className="container modal-contact">
+          <div className="highlight">
             <div>
               <h3>{t('about.title')}</h3>
               <p>{t('contact.about.desc')}</p>
             </div>
           </div>
-          <div className='form'>
+          <div className="form">
             <div>
               <div
-                className='close-modal'
+                className="close-modal"
                 onClick={() => {
                   if (setContactShow) setContactShow(false);
                 }}
@@ -67,23 +69,23 @@ const Contact: React.FC = () => {
                 <span></span>
               </div>
               <h3>{t('contact.title')}</h3>
-              <form action='' onSubmit={handleSubmit(onSubmit)}>
-                <div className='input '>
+              <form action="" onSubmit={handleSubmit(onSubmit)}>
+                <div className="input ">
                   <input
-                    id='name'
-                    name='name'
+                    id="name"
+                    name="name"
                     className={errors.name && 'invalid'}
-                    type='text'
+                    type="text"
                     ref={register({ required: true, maxLength: 80 })}
                   />
-                  <label htmlFor='name'>{t('name')}</label>
+                  <label htmlFor="name">{t('name')}</label>
                 </div>
-                <div className='input '>
+                <div className="input ">
                   <input
-                    id='email'
-                    name='email'
+                    id="email"
+                    name="email"
                     className={errors.email && 'invalid'}
-                    type='email'
+                    type="email"
                     ref={register({
                       required: 'Required',
                       pattern: {
@@ -92,18 +94,18 @@ const Contact: React.FC = () => {
                       },
                     })}
                   />
-                  <label htmlFor='email'>{t('email')}</label>
+                  <label htmlFor="email">{t('email')}</label>
                 </div>
-                <div className='input '>
+                <div className="input ">
                   <textarea
-                    id='message'
-                    name='message'
+                    id="message"
+                    name="message"
                     className={errors.message && 'invalid'}
                     ref={register({ required: true })}
                   />
-                  <label htmlFor='message'>{t('message')}</label>
+                  <label htmlFor="message">{t('message')}</label>
                 </div>
-                <button className='btn' type='submit'>
+                <button className="btn" type="submit">
                   {t('submit')}
                 </button>
               </form>

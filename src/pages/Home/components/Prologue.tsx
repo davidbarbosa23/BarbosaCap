@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 
 import { UseContactShow } from 'contexts/contact';
@@ -14,16 +15,14 @@ const Prologue: React.FC = () => {
   const { setContactShow } = UseContactShow();
 
   return (
-    <section className='Prologue container'>
-      <div className='content'>
+    <section className="Prologue container">
+      <div className="content">
         <img src={ProfilePic} alt={`${process.env.REACT_APP_NAME} Profile`} />
-        <div className='body'>
+        <div className="body">
           <div>
-            <h1
-              dangerouslySetInnerHTML={{ __html: t('home.prologue.title') }}
-            />
+            <h1 dangerouslySetInnerHTML={{ __html: t('home.prologue.title') }} />
             <button
-              className='btn'
+              className="btn"
               onClick={() => {
                 if (setContactShow) setContactShow(true);
               }}
@@ -32,11 +31,11 @@ const Prologue: React.FC = () => {
             </button>
           </div>
         </div>
-        <ul className='social'>
+        <ul className="social">
           <li>
             <a
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
               href={`https://www.linkedin.com/in/${process.env.REACT_APP_SOCIAL_LINKEDIN}`}
               title={`in/${process.env.REACT_APP_SOCIAL_LINKEDIN}`}
             >
@@ -45,8 +44,8 @@ const Prologue: React.FC = () => {
           </li>
           <li>
             <a
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
               href={`https://github.com/${process.env.REACT_APP_SOCIAL_GITHUB}`}
               title={`${process.env.REACT_APP_SOCIAL_GITHUB}`}
             >
@@ -55,8 +54,8 @@ const Prologue: React.FC = () => {
           </li>
           <li>
             <a
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
               href={`${process.env.PUBLIC_URL}/docs/backend-developer_david-barbosa.pdf`}
               title={`${process.env.REACT_APP_FULLNAME}`}
             >
@@ -65,8 +64,8 @@ const Prologue: React.FC = () => {
           </li>
           <li>
             <a
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
               href={`mailto:${process.env.REACT_APP_EMAIL}`}
               title={`${process.env.REACT_APP_EMAIL}`}
             >

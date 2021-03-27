@@ -1,16 +1,14 @@
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Contact from 'components/Contact';
 
-/** Context */
+import { ToastContainer } from 'react-toastify';
+
 import { ContactProvider } from 'contexts/contact';
 
-export const AppLayout: React.FC<{ className?: string }> = ({
-  children,
-  className,
-}) => {
+import Contact from 'components/Contact';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+
+export const AppLayout: React.FC<{ className?: string }> = ({ children, className }) => {
   return (
     <ContactProvider>
       <Header />
@@ -18,7 +16,7 @@ export const AppLayout: React.FC<{ className?: string }> = ({
       <Footer />
       <Contact />
       <ToastContainer
-        position='bottom-left'
+        position="bottom-left"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
