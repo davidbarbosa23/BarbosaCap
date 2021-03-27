@@ -4,12 +4,14 @@ import { useTranslation } from 'react-i18next';
 
 import { CodeLine, CodeContainer } from 'components/CodeModule';
 
+import styles from './styles.module.scss';
+
 const AboutMe: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="AboutMe">
-      <div className="container">
+    <section className={`${styles.AboutMe}`}>
+      <div className={`container`}>
         <h1>{t('about.title')}</h1>
         <CodeContainer>
           <CodeLine>

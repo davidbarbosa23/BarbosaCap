@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { AppLayout } from 'layouts/AppLayout';
 
-import './Projects.scss';
+import styles from './styles.module.scss';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -17,8 +17,8 @@ const Projects: React.FC = () => {
         </title>
         <meta name="description" content={'Projects | Experiments'}></meta>
       </Helmet>
-      <AppLayout className="Projects">
-        <div className="container">
+      <AppLayout className={`${styles.Projects} container`}>
+        <div className={styles.container}>
           <h1>{t('projects.title')}</h1>
         </div>
       </AppLayout>

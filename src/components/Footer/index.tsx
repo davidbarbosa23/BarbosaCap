@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer>
-      <div className="copy">
+      <div>
         © {currentYear} {process.env.REACT_APP_NAME}
       </div>
     </footer>

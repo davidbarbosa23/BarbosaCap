@@ -17,10 +17,8 @@ header.header {
   .brand {
     width: 10rem;
   }
-}
 
-@media (max-width: 490px) {
-  header {
+  @media (max-width: 490px) {
     grid-template-columns: 8rem auto;
     grid-template-rows: 3rem;
     .brand {

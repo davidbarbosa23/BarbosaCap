@@ -9,11 +9,14 @@ import { db } from 'config/Firebase';
 
 import { UseContactShow } from 'contexts/contact';
 
+import styles from './styles.module.scss';
+
 interface ContactData {
   name: string;
   email: string;
   message: string;
 }
+
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const { contactShow, setContactShow } = UseContactShow();

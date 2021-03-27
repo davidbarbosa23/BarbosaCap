@@ -51,6 +51,7 @@ section {
   overflow: hidden;
 }
 
+// ToDo: Refactor with some component
 code,
 .code {
   line-height: $line-height-base;
@@ -158,13 +159,9 @@ code,
   padding: 1.5rem 2rem;
   max-width: 1280px;
   margin: 0 auto;
-}
-@media (max-width: 800px) {
-  .container {
+  @media (max-width: 800px) {
     padding: 1.5rem;
   }
-}
-main {
 }
 
 footer {
@@ -178,6 +175,7 @@ button {
   }
 }
 
+// ToDo: Refactor in some component
 .modal-container {
   position: fixed;
   z-index: 9999;
@@ -356,6 +354,7 @@ button {
   }
 }
 
+// ToDo: Refactor in some component
 form {
   .input {
     width: 100%;
@@ -406,6 +405,7 @@ form {
   }
 }
 
+// ToDo: refactor as scss component
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;

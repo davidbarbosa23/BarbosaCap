@@ -10,19 +10,21 @@ import { ReactComponent as IconLinkedin } from 'assets/img/icon_linkedin.svg';
 import { ReactComponent as IconPDF } from 'assets/img/icon_pdf.svg';
 import ProfilePic from 'assets/img/profile_picture.jpg';
 
+import styles from './styles.module.scss';
+
 const Prologue: React.FC = () => {
   const { t } = useTranslation();
   const { setContactShow } = UseContactShow();
 
   return (
-    <section className="Prologue container">
-      <div className="content">
+    <section className={`${styles.Prologue} container`}>
+      <div className={styles.content}>
         <img src={ProfilePic} alt={`${process.env.REACT_APP_NAME} Profile`} />
-        <div className="body">
+        <div className={styles.body}>
           <div>
             <h1 dangerouslySetInnerHTML={{ __html: t('home.prologue.title') }} />
             <button
-              className="btn"
+              className={`${styles.btn} btn`}
               onClick={() => {
                 if (setContactShow) setContactShow(true);
               }}
@@ -31,7 +33,7 @@ const Prologue: React.FC = () => {
             </button>
           </div>
         </div>
-        <ul className="social">
+        <ul className={styles.social}>
           <li>
             <a
               target="_blank"
