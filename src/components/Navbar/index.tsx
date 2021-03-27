@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <ul>
         {/* <NavItem to={`/${t('lang')}`} content={t('home.menu')} /> */}
-        <NavItem to={`/${t('lang')}/projects`} content={t('projects.menu')} />
+        {/* <NavItem to={`/${t('lang')}/projects`} content={t('projects.menu')} /> */}
         <NavItem
           to={null}
           content={t('contact.menu')}

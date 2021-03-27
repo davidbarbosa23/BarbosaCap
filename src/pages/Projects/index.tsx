@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import { AppLayout } from 'layouts/AppLayout';
@@ -9,11 +10,19 @@ import './Projects.scss';
 const Projects: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <AppLayout className="Projects">
-      <div className="container">
-        <h1>{t('projects.title')}</h1>
-      </div>
-    </AppLayout>
+    <>
+      <Helmet>
+        <title>
+          {t('projects.title')} | {process.env.REACT_APP_SITE_TITLE}
+        </title>
+        <meta name="description" content={'Projects | Experiments'}></meta>
+      </Helmet>
+      <AppLayout className="Projects">
+        <div className="container">
+          <h1>{t('projects.title')}</h1>
+        </div>
+      </AppLayout>
+    </>
   );
 };
 

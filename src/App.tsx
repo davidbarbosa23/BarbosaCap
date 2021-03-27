@@ -22,7 +22,10 @@ const App: React.FC<RouteComponentProps> = (props) => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: params.locale ?? defaultLang }} />
+      <Helmet htmlAttributes={{ lang: params.locale ?? defaultLang }}>
+        <title>{process.env.REACT_APP_SITE_TITLE}</title>
+        <meta name="description" content={process.env.REACT_APP_SITE_DESC}></meta>
+      </Helmet>
       <Switch>
         {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + params.locale}`} />}
         {Routes.map(({ id, path, component }) => (

@@ -36,5 +36,8 @@
   "submit": "Submit",
 
   "toast.success.attempt": "Successfully sent!",
-  "toast.fail.attempt": "Something bad happened :("
+  "toast.fail.attempt": "Something bad happened :(",
+
+  "notfound.title": "Page not found",
+  "notfound.desc": "The page you are looing for doesn't exist. How you got here is a mystery. But, you can click the button below to go back to the homepage."
 }

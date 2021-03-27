@@ -36,5 +36,8 @@
   "submit": "Enviar",
 
   "toast.success.attempt": "¡Enviado satisfactoriamente!",
-  "toast.fail.attempt": "Ocurrió un error inesperado"
+  "toast.fail.attempt": "Ocurrió un error inesperado",
+
+  "notfound.title": "Página no encontrada",
+  "notfound.desc": "La página que estás buscando no existe. El cómo llegaste acá es un misterio. Pero, puedes hacr clic en el siguiente botón para ir al inicio."
 }
