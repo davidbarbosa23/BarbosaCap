@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
       classNames="modal-contact"
       unmountOnExit
     >
-      <div className="modal-container">
+      <div className={`${styles.modalContainer} modal-container`}>
         <div ref={nodeRef} className="container modal-contact">
           <div className="highlight">
             <div>

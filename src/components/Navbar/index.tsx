@@ -17,11 +17,11 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
-        {/* <NavItem to={`/${t('lang')}`} content={t('home.menu')} /> */}
-        {/* <NavItem to={`/${t('lang')}/projects`} content={t('projects.menu')} /> */}
+        {/* <NavItem to={`/${t('lang')}`} content={t('menu.home')} /> */}
+        {/* <NavItem to={`/${t('lang')}/projects`} content={t('menu.projects')} /> */}
         <NavItem
           to={null}
-          content={t('contact.menu')}
+          content={t('menu.contact')}
           clickHandler={() => {
             if (setContactShow) setContactShow(true);
           }}

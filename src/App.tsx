@@ -28,8 +28,8 @@ const App: React.FC<RouteComponentProps> = (props) => {
       </Helmet>
       <Switch>
         {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + params.locale}`} />}
-        {Routes.map(({ id, path, component }) => (
-          <Route key={id} path={`${props.match.url}${path}`} component={component} exact />
+        {Routes().map(({ id, path, Component }) => (
+          <Route key={id} path={`${props.match.url}${path}`} component={Component} exact />
         ))}
         <Route component={NotFound} />
       </Switch>

@@ -29,12 +29,7 @@ const NavItem: React.FC<INavItemProps> = (props) => {
           {props.content}
         </button>
       ) : (
-        <Link
-          exact={true}
-          activeClassName={styles.active}
-          className={props.className}
-          to={props.to}
-        >
+        <Link activeClassName={styles.active} className={props.className} to={props.to}>
           {props.icon}
           {props.content}
         </Link>

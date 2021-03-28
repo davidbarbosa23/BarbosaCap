@@ -22,7 +22,7 @@ const NotFound: React.FC = () => {
           <h1>{t('notfound.title')}</h1>
           <p>{t('notfound.desc')}</p>
           <Link className="btn" to={`/${t('lang')}`}>
-            {t('home.menu')}
+            {t('menu.home')}
           </Link>
         </div>
       </AppLayout>

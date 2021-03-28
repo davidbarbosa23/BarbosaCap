@@ -1,9 +1,9 @@
 {
   "lang": "es",
 
-  "home.menu": "Inicio",
-  "projects.menu": "Proyectos",
-  "contact.menu": "Contacto",
+  "menu.home": "Inicio",
+  "menu.projects": "Proyectos",
+  "menu.contact": "Contacto",
 
   "contact.title": "Contacto",
   "contact.about.desc": "Desarrollador backend de servicios web, pragmático, competente, adaptablealmedio,creando soluciones prácticas a problemas planteados; caracterizado por ser una persona responsable, entusiasta, con un amplio sentido de liderazgo y trabajo en equipo, en la búsqueda permanente de adquirir nuevos conocimientos y experiencias.",
@@ -28,6 +28,22 @@
   "home.about.code.skills": "Habilidades",
 
   "projects.title": "Proyectos",
+
+  "projects.fgc.title": "Calculadora de piñón fijo",
+  "projects.fgc.desc": "",
+  "projects.fgc.chainring": "Coronilla",
+  "projects.fgc.rearsproket": "Piñón",
+  "projects.fgc.tire": "Cubierta",
+  "projects.fgc.ambiskid": "Skid ambidiestro",
+  "projects.fgc.ratio": "Proporción",
+  "projects.fgc.skidpatch": "Skid Patch",
+  "projects.fgc.development": "Desarrollo",
+  "projects.fgc.equivalentgear": "Cambio equivalente",
+  "projects.fgc.cadence": "Cadencia",
+  "projects.fgc.speed": "Velocidad",
+  "projects.fgc.unit": "Sistema de medida",
+  "projects.fgc.metric": "Métrico",
+  "projects.fgc.imperial": "Imperial",
 
   "share": "Compartir",
   "name": "Nombre",
