@@ -1,9 +1,9 @@
 {
   "lang": "en",
 
-  "home.menu": "Home",
-  "projects.menu": "Projects",
-  "contact.menu": "Contact",
+  "menu.home": "Home",
+  "menu.projects": "Projects",
+  "menu.contact": "Contact",
 
   "contact.title": "Contact",
   "contact.about.desc": "Backend web developer, pragmatic, competent, adaptable. Always creating practical solutions to inquiries; characterized by being a responsible, enthusiastic person, with sense of leadership and teamwork. Permanent searching to acquire new knowledge and experiences.",
@@ -29,6 +29,24 @@
 
   "projects.title": "Projects",
 
+  "projects.fgc.title": "Fixed Gear Calculator",
+  "projects.fgc.desc": "",
+  "projects.fgc.chainring": "Chain Ring",
+  "projects.fgc.rearsproket": "Rear Sproket",
+  "projects.fgc.tire": "Tire",
+  "projects.fgc.ambiskid": "Ambidextrous Skid",
+  "projects.fgc.ratio": "Ratio",
+  "projects.fgc.skidpatch": "Skid Patch",
+  "projects.fgc.development": "Development",
+  "projects.fgc.equivalentgear": "Equivalent Gear",
+  "projects.fgc.cadence": "Cadence",
+  "projects.fgc.speed": "Speed",
+  "projects.fgc.unit": "Unit Type",
+  "projects.fgc.metric": "Metric",
+  "projects.fgc.imperial": "Imperial",
+
+  "analysis": "Analysis",
+  "settings": "Settings",
   "share": "Share",
   "name": "Name",
   "email": "Email",
