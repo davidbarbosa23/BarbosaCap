@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
   const { contactShow, setContactShow } = UseContactShow();
   const nodeRef = React.useRef(null);
 
-  const { handleSubmit, register, errors } = useForm<ContactData>();
+  const { handleSubmit, register, formState: { errors } } = useForm<ContactData>();
 
   const onSubmit = (values: ContactData) => {
     if (saveContact(values)) {
@@ -43,7 +43,6 @@ const Contact: React.FC = () => {
     }
   };
 
-  // console.log(props.open);
   return (
     <CSSTransition
       nodeRef={nodeRef}
@@ -76,20 +75,18 @@ const Contact: React.FC = () => {
                 <div className="input ">
                   <input
                     id="name"
-                    name="name"
                     className={errors.name && 'invalid'}
                     type="text"
-                    ref={register({ required: true, maxLength: 80 })}
+                    {...register("name", { required: true, maxLength: 80 })}
                   />
                   <label htmlFor="name">{t('name')}</label>
                 </div>
                 <div className="input ">
                   <input
                     id="email"
-                    name="email"
                     className={errors.email && 'invalid'}
                     type="email"
-                    ref={register({
+                    {...register("email", {
                       required: 'Required',
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -102,9 +99,8 @@ const Contact: React.FC = () => {
                 <div className="input ">
                   <textarea
                     id="message"
-                    name="message"
                     className={errors.message && 'invalid'}
-                    ref={register({ required: true })}
+                    {...register("message", { required: true })}
                   />
                   <label htmlFor="message">{t('message')}</label>
                 </div>
