@@ -16,7 +16,7 @@ const FixedGearCalculator: React.FC = () => {
         <title>
           {t('projects.fgc.title')} | {process.env.REACT_APP_SITE_TITLE}
         </title>
-∆      </Helmet>
+      </Helmet>
       <AppLayout className={`${styles.FGC} container`}>
         <div className={styles.container}>
           <h1>{t('projects.fgc.title')}</h1>
