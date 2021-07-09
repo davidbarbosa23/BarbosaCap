@@ -3,8 +3,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { flags } from 'config/flags';
+import { Routes } from 'config/Routes';
 
-import { UseContactShow } from 'contexts/contact';
+import { useContactShow } from 'contexts/contact';
 
 import LangSelector from './components/LangSelector';
 import NavItem from './components/NavItem';
@@ -12,13 +13,16 @@ import styles from './styles.module.scss';
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
-  const { setContactShow } = UseContactShow();
+  const { setContactShow } = useContactShow();
+  const routes = Routes(false).map(({ id, path }) => ({ id, path: path[t('lang')] }));
 
   return (
     <nav className={styles.navbar}>
       <ul>
-        {/* <NavItem to={`/${t('lang')}`} content={t('menu.home')} /> */}
-        {/* <NavItem to={`/${t('lang')}/projects`} content={t('menu.projects')} /> */}
+        <NavItem
+          to={`/${t('lang')}${routes.find(({ id }) => id === 'projects')?.path}`}
+          content={t('menu.projects')}
+        />
         <NavItem
           to={null}
           content={t('menu.contact')}

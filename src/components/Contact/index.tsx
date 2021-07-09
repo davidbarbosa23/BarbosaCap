@@ -7,7 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { db } from 'config/Firebase';
 
-import { UseContactShow } from 'contexts/contact';
+import { useContactShow } from 'contexts/contact';
 
 import styles from './styles.module.scss';
 
@@ -19,10 +19,14 @@ interface ContactData {
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const { contactShow, setContactShow } = UseContactShow();
+  const { contactShow, setContactShow } = useContactShow();
   const nodeRef = React.useRef(null);
 
-  const { handleSubmit, register, formState: { errors } } = useForm<ContactData>();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<ContactData>();
 
   const onSubmit = (values: ContactData) => {
     if (saveContact(values)) {
@@ -77,7 +81,7 @@ const Contact: React.FC = () => {
                     id="name"
                     className={errors.name && 'invalid'}
                     type="text"
-                    {...register("name", { required: true, maxLength: 80 })}
+                    {...register('name', { required: true, maxLength: 80 })}
                   />
                   <label htmlFor="name">{t('name')}</label>
                 </div>
@@ -86,7 +90,7 @@ const Contact: React.FC = () => {
                     id="email"
                     className={errors.email && 'invalid'}
                     type="email"
-                    {...register("email", {
+                    {...register('email', {
                       required: 'Required',
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -100,7 +104,7 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     className={errors.message && 'invalid'}
-                    {...register("message", { required: true })}
+                    {...register('message', { required: true })}
                   />
                   <label htmlFor="message">{t('message')}</label>
                 </div>

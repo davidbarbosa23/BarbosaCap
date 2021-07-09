@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
 const defaultContactShow = false;
 type ContactContextType = {
@@ -17,4 +17,4 @@ export const ContactProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const UseContactShow = () => useContext(ContactContext);
+export const useContactShow = () => useContext(ContactContext);

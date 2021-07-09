@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { NavLink as Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import useOutsideClick from 'helpers/useOutsideClick';
 
@@ -29,10 +29,10 @@ const NavItem: React.FC<INavItemProps> = (props) => {
           {props.content}
         </button>
       ) : (
-        <Link activeClassName={styles.active} className={props.className} to={props.to}>
+        <NavLink activeClassName={styles.active} className={props.className} to={props.to}>
           {props.icon}
           {props.content}
-        </Link>
+        </NavLink>
       )}
 
       {childOpen && props.children}

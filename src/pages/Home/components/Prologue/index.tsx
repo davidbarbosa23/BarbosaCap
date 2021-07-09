@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { UseContactShow } from 'contexts/contact';
+import { useContactShow } from 'contexts/contact';
 
 import { ReactComponent as IconEmail } from 'assets/img/icon_email.svg';
 import { ReactComponent as IconGithub } from 'assets/img/icon_github.svg';
@@ -14,7 +14,7 @@ import styles from './styles.module.scss';
 
 const Prologue: React.FC = () => {
   const { t } = useTranslation();
-  const { setContactShow } = UseContactShow();
+  const { setContactShow } = useContactShow();
 
   return (
     <section className={`${styles.Prologue} container`}>

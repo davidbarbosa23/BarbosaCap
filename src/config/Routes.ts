@@ -5,22 +5,32 @@ const Projects = lazy(() => import('pages/Projects'));
 const ProjectsFGC = lazy(() => import('pages/Projects/pages/FixedGearCalculator'));
 export const NotFound = lazy(() => import('pages/NotFound'));
 
-export const Routes = () => {
-  return [
+export const Routes = (
+  all: Boolean = true
+): Array<{ id: string; path: { [key: string]: string }; Component?: any }> =>
+  [
     {
       id: 'home',
-      path: '/',
+      path: {
+        en: '/',
+        es: '/',
+      },
       Component: Home,
     },
     {
       id: 'projects',
-      path: '/projects',
+      path: {
+        en: '/projects',
+        es: '/proyectos',
+      },
       Component: Projects,
     },
     {
       id: 'projectsFGC',
-      path: '/projects/fixed-gear-calculator',
+      path: {
+        en: '/projects/fixed-gear-calculator',
+        es: '/proyectos/calculadora-fixed-gear',
+      },
       Component: ProjectsFGC,
     },
-  ];
-};
+  ].map((route) => (all ? route : { id: route.id, path: route.path }));

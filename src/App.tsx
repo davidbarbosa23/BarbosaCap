@@ -7,29 +7,39 @@ import { Redirect, Route, RouteComponentProps, Switch, useParams } from 'react-r
 import AppLangs, { defaultLang } from 'config/AppLangs';
 import { NotFound, Routes } from 'config/Routes';
 
+import { CurrentPathProvider } from 'contexts/currentPath';
+
 interface IParams {
-  locale: string;
+  locale: 'en' | 'es';
 }
 
 const App: React.FC<RouteComponentProps> = (props) => {
   const { i18n } = useTranslation();
-  const params: IParams = useParams();
+  const { locale }: IParams = useParams();
 
   useEffect(() => {
-    i18n.changeLanguage(params.locale ?? defaultLang);
+    i18n.changeLanguage(locale ?? defaultLang);
     // eslint-disable-next-line
-  }, [params.locale]);
+  }, [locale]);
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: params.locale ?? defaultLang }}>
+      <Helmet htmlAttributes={{ lang: locale ?? defaultLang }}>
         <title>{process.env.REACT_APP_SITE_TITLE}</title>
         <meta name="description" content={process.env.REACT_APP_SITE_DESC}></meta>
       </Helmet>
       <Switch>
-        {params.locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + params.locale}`} />}
-        {Routes().map(({ id, path, Component }) => (
-          <Route key={id} path={`${props.match.url}${path}`} component={Component} exact />
+        {locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + locale}`} />}
+        {Routes(true).map(({ id, path, Component }: any) => (
+          <Route
+            key={id}
+            path={`${props.match.url}${locale in path ? path[locale] : path.en}`}
+            exact
+          >
+            <CurrentPathProvider path={{ id, path, lang: locale }}>
+              <Component />
+            </CurrentPathProvider>
+          </Route>
         ))}
         <Route component={NotFound} />
       </Switch>
