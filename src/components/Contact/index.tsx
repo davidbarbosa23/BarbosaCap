@@ -28,8 +28,8 @@ const Contact: React.FC = () => {
     formState: { errors },
   } = useForm<ContactData>();
 
-  const onSubmit = (values: ContactData) => {
-    if (saveContact(values)) {
+  const onSubmit = async (values: ContactData) => {
+    if (await saveContact(values)) {
       if (setContactShow) setContactShow(false);
       toast.success(t('toast.success.attempt'));
     } else {
