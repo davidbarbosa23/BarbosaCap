@@ -23,6 +23,11 @@
             "position": "before"
           },
           {
+            "pattern": "hooks/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
             "pattern": "helpers/**",
             "group": "internal",
             "position": "before"

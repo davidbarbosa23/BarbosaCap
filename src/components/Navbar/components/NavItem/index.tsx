@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import useOutsideClick from 'helpers/useOutsideClick';
+import useOutsideClick from 'hooks/useOutsideClick';
 
 import styles from './styles.module.scss';
 
