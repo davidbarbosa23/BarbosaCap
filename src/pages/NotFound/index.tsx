@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import { AppLayout } from 'layouts/AppLayout';
+import AppLayout from 'layouts/AppLayout';
 
 import styles from './styles.module.scss';
 

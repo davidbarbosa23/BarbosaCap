@@ -3,18 +3,20 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import Navbar from 'components/Navbar';
-
 import Logo from 'assets/img/logo_barbosacap.svg';
+
+import Navbar from '../Navbar';
 
 import styles from './styles.module.scss';
 
 const Header: React.FC = () => {
-  const { t } = useTranslation();
+  const {
+    i18n: { language },
+  } = useTranslation();
 
   return (
     <header className={styles.header}>
-      <Link to={`/${t('lang')}`} className={styles.brand}>
+      <Link to={`/${language}`} className={styles.brand}>
         <img src={Logo} alt={`${process.env.REACT_APP_NAME} Logo`} />
       </Link>
       <Navbar />

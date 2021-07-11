@@ -4,16 +4,14 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Redirect, Route, RouteComponentProps, Switch, useParams } from 'react-router-dom';
 
-import AppLangs, { defaultLang } from 'config/AppLangs';
-import { NotFound, Routes } from 'config/Routes';
-
-import { CurrentPathProvider } from 'contexts/currentPath';
+import { defaultLang, langsList, tAllowedLangs } from 'config/Langs';
+import { NotFound, routes } from 'config/Routes';
 
 interface IParams {
-  locale: 'en' | 'es';
+  locale: tAllowedLangs;
 }
 
-const App: React.FC<RouteComponentProps> = (props) => {
+const App: React.FC<RouteComponentProps> = ({ match }) => {
   const { i18n } = useTranslation();
   const { locale }: IParams = useParams();
 
@@ -24,24 +22,29 @@ const App: React.FC<RouteComponentProps> = (props) => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: locale ?? defaultLang }}>
+      <Helmet htmlAttributes={{ lang: locale || defaultLang }}>
         <title>{process.env.REACT_APP_SITE_TITLE}</title>
         <meta name="description" content={process.env.REACT_APP_SITE_DESC}></meta>
       </Helmet>
       <Switch>
-        {locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + locale}`} />}
-        {Routes(true).map(({ id, path, Component }: any) => (
+        {!langsList.includes(locale) && <Redirect to={`/${defaultLang + '/' + locale}`} />}
+        {routes.map(({ id, path, Component }) => (
           <Route
-            key={id}
-            path={`${props.match.url}${locale in path ? path[locale] : path.en}`}
             exact
-          >
-            <CurrentPathProvider path={{ id, path, lang: locale }}>
-              <Component />
-            </CurrentPathProvider>
-          </Route>
+            key={id}
+            path={`${match.url}${locale in path ? path[locale] : path.en}`}
+            render={({ location }) => {
+              location.state = { lang: locale, pathId: id };
+              return <Component />;
+            }}
+          />
         ))}
-        <Route component={NotFound} />
+        <Route
+          render={({ location }) => {
+            location.state = { lang: locale };
+            return <NotFound />;
+          }}
+        />
       </Switch>
     </>
   );

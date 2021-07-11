@@ -1,6 +1,7 @@
 {
   "short_name": "BarbosaCap",
   "name": "David Barbosa Website",
+  "description": "David Barbosa Website, Software/Web Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +9,9 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
+  "start_url": "/en",
   "theme_color": "#404859",
-  "background_color": "#030305"
+  "background_color": "#030305",
+  "display": "standalone",
+  "dir": "ltr"
 }
