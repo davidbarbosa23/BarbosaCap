@@ -10,6 +10,7 @@
 
   "about.title": "Acerca de mi",
 
+  "home.description": "David Barbosa. Desarrollador de software",
   "home.prologue.title": "Hola!, <br />Soy David Barbosa, <br />Desarrollador de Software/Web",
   "home.prologue.desc": "Home",
   "home.prologue.btn": "¡Contáctame!",
@@ -28,6 +29,7 @@
   "home.about.code.skills": "Habilidades",
 
   "projects.title": "Proyectos",
+  "projects.description": "Proyectos | Experimentos",
 
   "projects.fgc.title": "Calculadora de piñón fijo",
   "projects.fgc.desc": "",

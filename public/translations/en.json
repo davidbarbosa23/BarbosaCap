@@ -10,6 +10,7 @@
 
   "about.title": "About me",
 
+  "home.description": "David Barbosa Website, Software/Web Developer",
   "home.prologue.title": "Hi!, <br />I'm David Barbosa, <br />Software/Web Developer",
   "home.prologue.desc": "Home",
   "home.prologue.btn": "Contact me!",
@@ -28,6 +29,7 @@
   "home.about.code.skills": "Skills",
 
   "projects.title": "Projects",
+  "projects.description": "Projects | Experiments",
 
   "projects.fgc.title": "Fixed Gear Calculator",
   "projects.fgc.desc": "",
