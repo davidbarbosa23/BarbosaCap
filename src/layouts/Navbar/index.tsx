@@ -16,7 +16,7 @@ const Navbar: React.FC = (props) => {
   }: { state: any } = useLocation();
 
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <ul>
         <li>
           <NavLink to={`/${lang}`} activeClassName={styles.active}>
