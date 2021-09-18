@@ -11,8 +11,6 @@ import AppLayout from 'components/AppLayout';
 
 import { appStrings } from 'config/translations';
 
-import './App.css';
-
 function App(): JSX.Element {
   return (
     <LocalizedRouter
