@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { AppRoute } from 'constant/app-routes';
+import { AppRouteComponents } from 'constant/app-routes-components';
+import { AppLanguage } from 'constant/app-languages';
+
+import Errors from 'pages/Errors';
+
+import { LocalizedRouter, LocalizedSwitch } from 'components/i18n';
+import AppLayout from 'components/AppLayout';
+
+import { appStrings } from 'config/translations';
+
 import './App.css';
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LocalizedRouter
+      RouterComponent={BrowserRouter}
+      languages={AppLanguage}
+      appStrings={appStrings}
+    >
+      <AppLayout>
+        <LocalizedSwitch>
+          {(Object.keys(AppRoute) as Array<keyof typeof AppRoute>).map((elem) => {
+            const Component = AppRouteComponents.get(AppRoute[elem]) ?? Errors;
+            return (
+              <Route key={elem} exact path={AppRoute[elem]}>
+                <Component />
+              </Route>
+            );
+          })}
+          <Route path="*">
+            <Errors />
+          </Route>
+        </LocalizedSwitch>
+      </AppLayout>
+    </LocalizedRouter>
   );
 }
 
