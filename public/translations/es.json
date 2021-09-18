@@ -1,0 +1,61 @@
+{
+  "lang": "es",
+
+  "menu.home": "Inicio",
+  "menu.projects": "Proyectos",
+  "menu.contact": "Contacto",
+
+  "contact.title": "Contacto",
+  "contact.about.desc": "Desarrollador backend de servicios web, pragmático, competente, adaptablealmedio,creando soluciones prácticas a problemas planteados; caracterizado por ser una persona responsable, entusiasta, con un amplio sentido de liderazgo y trabajo en equipo, en la búsqueda permanente de adquirir nuevos conocimientos y experiencias.",
+
+  "about.title": "Acerca de mi",
+
+  "home.description": "David Barbosa. Desarrollador de software",
+  "home.prologue.title": "Hola!, <br />Soy David Barbosa, <br />Desarrollador de Software/Web",
+  "home.prologue.desc": "Home",
+  "home.prologue.btn": "¡Contáctame!",
+  "home.about.code.desc": "Desarrollador de software, enfocado en aplicaciones web",
+  "home.about.code.exp": "Experiencia",
+  "home.about.code.exp1": "Diseñador Web en",
+  "home.about.code.exp2": "Diseñador Web en",
+  "home.about.code.exp3": "Diseñador Web en",
+  "home.about.code.exp4": "Desarrollador Web en",
+  "home.about.code.exp5": "Ingeniero de Software en",
+  "home.about.code.exp6": "Ingeniero de Software Front End en",
+  "home.about.code.edu": "Educación",
+  "home.about.code.edu1": "Desarrollo de proyectos para apropiación de conceptos con aplicaciones en Ingeniería",
+  "home.about.code.edu2": "Diseño Gráfico",
+  "home.about.code.edu3": "Introducción al Desarrollo Web",
+  "home.about.code.skills": "Habilidades",
+
+  "projects.title": "Proyectos",
+  "projects.description": "Proyectos | Experimentos",
+
+  "projects.fgc.title": "Calculadora de piñón fijo",
+  "projects.fgc.desc": "",
+  "projects.fgc.chainring": "Coronilla",
+  "projects.fgc.rearsproket": "Piñón",
+  "projects.fgc.tire": "Cubierta",
+  "projects.fgc.ambiskid": "Skid ambidiestro",
+  "projects.fgc.ratio": "Proporción",
+  "projects.fgc.skidpatch": "Skid Patch",
+  "projects.fgc.development": "Desarrollo",
+  "projects.fgc.equivalentgear": "Cambio equivalente",
+  "projects.fgc.cadence": "Cadencia",
+  "projects.fgc.speed": "Velocidad",
+  "projects.fgc.unit": "Sistema de medida",
+  "projects.fgc.metric": "Métrico",
+  "projects.fgc.imperial": "Imperial",
+
+  "share": "Compartir",
+  "name": "Nombre",
+  "email": "Correo Electrónico",
+  "message": "Mensaje",
+  "submit": "Enviar",
+
+  "toast.success.attempt": "¡Enviado satisfactoriamente!",
+  "toast.fail.attempt": "Ocurrió un error inesperado",
+
+  "notfound.title": "Página no encontrada",
+  "notfound.desc": "La página que estás buscando no existe. El cómo llegaste acá es un misterio. Pero, puedes hacr clic en el siguiente botón para ir al inicio."
+}
