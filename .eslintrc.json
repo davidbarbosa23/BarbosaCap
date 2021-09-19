@@ -27,6 +27,7 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react/jsx-one-expression-per-line": "off",
     "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
