@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-const Home: React.FC = () => (
+const Home: FC = () => (
   <section>
     <h1>
       <FormattedMessage id="home.title" />

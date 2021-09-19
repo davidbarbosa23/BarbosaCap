@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Children, cloneElement, FC, isValidElement } from 'react';
 import { Switch, RouteProps } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
-const LocalizedSwitch: React.FC = ({ children }) => {
+const LocalizedSwitch: FC = ({ children }) => {
   /**
    * inject params and formatMessage through hooks, so we can localize the route
    */
@@ -30,9 +30,9 @@ const LocalizedSwitch: React.FC = ({ children }) => {
    */
   return (
     <Switch>
-      {React.Children.map(children, (child) =>
-        React.isValidElement<RouteProps>(child)
-          ? React.cloneElement(child, {
+      {Children.map(children, (child) =>
+        isValidElement<RouteProps>(child)
+          ? cloneElement(child, {
               ...child.props,
               path: localizeRoutePath(child.props.path),
             })

@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { ComponentClass, FunctionComponent } from 'react';
 import { IntlProvider } from 'react-intl';
 import { Route, Redirect } from 'react-router-dom';
 import { AppLanguage } from 'constant/app-languages';
 
-import { LanguageStrings } from 'config/translations';
+import { LanguageStrings } from 'config/i18n';
 
 interface Props {
-  RouterComponent: React.ComponentClass;
+  RouterComponent: ComponentClass;
   languages: { [k: number]: string };
   appStrings: { [prop: string]: LanguageStrings };
   defaultLanguage?: AppLanguage;
 }
 
-const LocalizedRouter: React.FC<Props> = ({
+const LocalizedRouter: FunctionComponent<Props> = ({
   children,
   RouterComponent,
   appStrings,
-  defaultLanguage,
+  defaultLanguage = AppLanguage.English,
 }) => (
   <RouterComponent>
     <Route path="/:lang([a-zA-Z]{2})">
@@ -26,7 +26,7 @@ const LocalizedRouter: React.FC<Props> = ({
          * Set default locale to en if base path is used without a language
          */
         const params: { lang?: string } = match ? match.params : {};
-        const { lang = defaultLanguage || AppLanguage.English } = params;
+        const { lang = defaultLanguage } = params;
 
         /**
          * If language is not in route path, redirect to language root
@@ -46,9 +46,5 @@ const LocalizedRouter: React.FC<Props> = ({
     </Route>
   </RouterComponent>
 );
-
-LocalizedRouter.defaultProps = {
-  defaultLanguage: AppLanguage.English,
-};
 
 export default LocalizedRouter;

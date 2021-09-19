@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-const Projects: React.FC = () => {
+const Projects: FC = () => {
   const intl = useIntl();
 
   return (

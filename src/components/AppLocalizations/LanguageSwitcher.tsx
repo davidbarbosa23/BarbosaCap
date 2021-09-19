@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { AppLanguage } from 'constant/app-languages';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
-import { appStrings } from 'config/translations';
+import { appStrings } from 'config/i18n';
 
 const strings: { [key: string]: { [key: string]: string | number } } = appStrings;
 
-const LanguageSwitcher: React.FC = () => {
+const LanguageSwitcher: FC = () => {
   const { pathname } = useLocation();
   const { messages } = useIntl();
 

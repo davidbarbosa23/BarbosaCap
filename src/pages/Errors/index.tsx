@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-const Errors: React.FC = () => (
+const Errors: FC = () => (
   <section>
     <h1>
       <FormattedMessage id="error.title" />

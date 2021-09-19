@@ -1,12 +1,12 @@
-import React from 'react';
-import Navigation from 'components/Navigation';
-import LanguageSwitcher from 'components/i18n/LanguageSwitcher';
+import React, { FC } from 'react';
+import AppNavigation from 'components/AppNavigation';
+import LanguageSwitcher from 'components/AppLocalizations/LanguageSwitcher';
 
-const AppLayout: React.FC = ({ children }) => (
+const AppLayout: FC = ({ children }) => (
   <>
     <header>
       <nav>
-        <Navigation />
+        <AppNavigation />
         <LanguageSwitcher />
       </nav>
     </header>
