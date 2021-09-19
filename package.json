@@ -67,7 +67,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/",
       "!src/constant/*",
-      "!src/reportWebVitals.ts",
+      "!src/config/*",
       "!src/index.tsx",
       "!src/**/*.stories.tsx"
     ],
