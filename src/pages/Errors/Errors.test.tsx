@@ -4,6 +4,6 @@ import Errors from './index';
 
 test('renders Errors page', () => {
   render(<Errors />);
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+  const renderPage = screen.getByTestId('PageErrors');
+  expect(renderPage).toBeInTheDocument();
 });

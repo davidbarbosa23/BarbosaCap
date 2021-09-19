@@ -10,7 +10,7 @@ const LocalizedSwitch: FC = ({ children }) => {
 
   /**
    *
-   * @param path can be string, undefined or string array
+   * @param path can be string, undefined or readonly string array
    * @returns Localized string path or path array
    */
   function localizeRoutePath(path?: string | readonly string[]) {

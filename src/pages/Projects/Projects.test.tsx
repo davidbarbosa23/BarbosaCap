@@ -4,6 +4,6 @@ import Projects from './index';
 
 test('renders Projects page', () => {
   render(<Projects />);
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+  const renderPage = screen.getByTestId('PageProjects');
+  expect(renderPage).toBeInTheDocument();
 });

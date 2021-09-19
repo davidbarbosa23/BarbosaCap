@@ -5,7 +5,7 @@ const Projects: FC = () => {
   const intl = useIntl();
 
   return (
-    <section>
+    <section data-testid="PageProjects">
       <h1>
         <FormattedMessage id="projects.title" />
       </h1>
