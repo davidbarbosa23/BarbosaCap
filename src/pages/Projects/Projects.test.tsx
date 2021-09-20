@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from 'helpers/testRenderIntl';
-import Projects from './index';
+import Projects from '.';
 
 test('renders Projects page', () => {
   render(<Projects />);

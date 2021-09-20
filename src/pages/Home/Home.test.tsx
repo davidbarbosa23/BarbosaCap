@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from 'helpers/testRenderIntl';
-import Home from './index';
+import Home from '.';
 
 test('renders Home page', () => {
   render(<Home />);

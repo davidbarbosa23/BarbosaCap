@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Dropdown from './Dropdown';
+import Dropdown from '.';
 import LazyDropdown from './Dropdown.lazy';
 
 describe('<Dropdown />', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from 'helpers/testRenderIntl';
-import Errors from './index';
+import Errors from '.';
 
 test('renders Errors page', () => {
   render(<Errors />);
