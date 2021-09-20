@@ -6,10 +6,17 @@
   "component": {
     "default": {
       "path": "src/components",
-      "withStyle": true,
-      "withTest": false,
+      "withLazy": true,
+      "withStory": true,
+      "withStyle": false,
+      "withTest": true
+    },
+    "page": {
+      "path": "src/pages",
+      "withLazy": false,
       "withStory": false,
-      "withLazy": true
+      "withStyle": false,
+      "withTest": true
     }
   }
 }

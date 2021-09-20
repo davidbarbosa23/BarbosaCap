@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import { AppLayout } from 'layouts/AppLayout';
-
-import AboutMe from './components/AboutMe';
-import Prologue from './components/Prologue';
-import styles from './styles.module.scss';
-
-const Home: React.FC = () => {
-  return (
-    <AppLayout className={styles.Home}>
-      <Prologue />
-      <AboutMe />
-    </AppLayout>
-  );
-};
+const Home: FC = () => (
+  <section data-testid="PageHome">
+    <h1>
+      <FormattedMessage id="home.title" />
+    </h1>
+    <div>
+      <FormattedMessage id="home.content" />
+    </div>
+  </section>
+);
 
 export default Home;
