@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions, RenderResult, screen } from '@testing-library/react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { AppLanguage } from 'constant/app-languages';
@@ -8,7 +8,7 @@ import LocalizedSwitch from 'components/AppLocalizations/LocalizedSwitch';
 
 import { appStrings } from 'config/i18n';
 
-const Wrapper: FunctionComponent = ({ children }) => (
+const Wrapper: FC = ({ children }) => (
   <LocalizedRouter RouterComponent={BrowserRouter} languages={AppLanguage} appStrings={appStrings}>
     <LocalizedSwitch>
       <Route exact path={undefined}>

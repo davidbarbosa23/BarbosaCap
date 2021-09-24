@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { VFC } from 'react';
 
 import { Button } from './Button';
 import './header.css';
@@ -10,12 +10,7 @@ interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export const Header: FunctionComponent<HeaderProps> = ({
-  user,
-  onLogin,
-  onLogout,
-  onCreateAccount,
-}) => (
+export const Header: VFC<HeaderProps> = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <header>
     <div className="wrapper">
       <div>

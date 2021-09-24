@@ -1,4 +1,4 @@
-import React, { ComponentClass, FunctionComponent } from 'react';
+import React, { ComponentClass, FC } from 'react';
 import { IntlProvider } from 'react-intl';
 import { Route, Redirect } from 'react-router-dom';
 import { AppLanguage } from 'constant/app-languages';
@@ -12,7 +12,7 @@ interface Props {
   defaultLanguage?: AppLanguage;
 }
 
-const LocalizedRouter: FunctionComponent<Props> = ({
+const LocalizedRouter: FC<Props> = ({
   children,
   RouterComponent,
   appStrings,

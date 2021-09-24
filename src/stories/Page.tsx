@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { VFC } from 'react';
 
 import { Header } from './Header';
 import './page.css';
@@ -10,12 +10,7 @@ interface PageProps {
   onCreateAccount: () => void;
 }
 
-export const Page: FunctionComponent<PageProps> = ({
-  user,
-  onLogin,
-  onLogout,
-  onCreateAccount,
-}) => (
+export const Page: VFC<PageProps> = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <article>
     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
 
