@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { Button } from './Button';
 import './header.css';
@@ -10,7 +10,12 @@ interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header: FunctionComponent<HeaderProps> = ({
+  user,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+}) => (
   <header>
     <div className="wrapper">
       <div>

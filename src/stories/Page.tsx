@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { Header } from './Header';
 import './page.css';
@@ -10,7 +10,12 @@ interface PageProps {
   onCreateAccount: () => void;
 }
 
-export const Page = ({ user, onLogin, onLogout, onCreateAccount }: PageProps) => (
+export const Page: FunctionComponent<PageProps> = ({
+  user,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+}) => (
   <article>
     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
 

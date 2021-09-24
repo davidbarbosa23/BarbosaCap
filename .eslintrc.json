@@ -20,7 +20,15 @@
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": { "{}": false }
+      }
+    ],
     "no-shadow": "off",
+    "react/no-unescaped-entities": 0,
     "@typescript-eslint/no-shadow": ["error"],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
