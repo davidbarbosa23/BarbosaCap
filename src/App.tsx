@@ -1,50 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { ComponentType, Suspense } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { AppRoute } from 'constant/app-routes';
+import { AppRouteComponents } from 'constant/app-routes-components';
+import { AppLanguages } from 'constant/app-languages';
+import { DarkModeProvider } from 'contexts/darkModeContext';
 
-import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
-import { Redirect, Route, RouteComponentProps, Switch, useParams } from 'react-router-dom';
+import Errors from 'pages/Errors';
 
-import AppLangs, { defaultLang } from 'config/AppLangs';
-import { NotFound, Routes } from 'config/Routes';
+import LocalizedRouter from 'components/AppLocalizations/LocalizedRouter';
+import LocalizedSwitch from 'components/AppLocalizations/LocalizedSwitch';
+import AppLayout from 'components/AppLayout';
 
-import { CurrentPathProvider } from 'contexts/currentPath';
+import { appStrings } from 'config/i18n';
 
-interface IParams {
-  locale: 'en' | 'es';
-}
-
-const App: React.FC<RouteComponentProps> = (props) => {
-  const { i18n } = useTranslation();
-  const { locale }: IParams = useParams();
-
-  useEffect(() => {
-    i18n.changeLanguage(locale ?? defaultLang);
-    // eslint-disable-next-line
-  }, [locale]);
-
+function App(): JSX.Element {
   return (
-    <>
-      <Helmet htmlAttributes={{ lang: locale ?? defaultLang }}>
-        <title>{process.env.REACT_APP_SITE_TITLE}</title>
-        <meta name="description" content={process.env.REACT_APP_SITE_DESC}></meta>
-      </Helmet>
-      <Switch>
-        {locale in AppLangs ? '' : <Redirect to={`/${defaultLang + '/' + locale}`} />}
-        {Routes(true).map(({ id, path, Component }: any) => (
-          <Route
-            key={id}
-            path={`${props.match.url}${locale in path ? path[locale] : path.en}`}
-            exact
-          >
-            <CurrentPathProvider path={{ id, path, lang: locale }}>
-              <Component />
-            </CurrentPathProvider>
-          </Route>
-        ))}
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <DarkModeProvider>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LocalizedRouter
+          RouterComponent={BrowserRouter}
+          languages={AppLanguages}
+          appStrings={appStrings}
+        >
+          <AppLayout>
+            <LocalizedSwitch>
+              {(Object.keys(AppRoute) as Array<keyof typeof AppRoute>).map((elem) => {
+                const Component = AppRouteComponents.get(AppRoute[elem]) as ComponentType;
+                return (
+                  <Route key={elem} exact path={AppRoute[elem]}>
+                    <Component />
+                  </Route>
+                );
+              })}
+              <Route path="*">
+                <Errors />
+              </Route>
+            </LocalizedSwitch>
+          </AppLayout>
+        </LocalizedRouter>
+      </Suspense>
+    </DarkModeProvider>
   );
-};
+}
 
 export default App;
