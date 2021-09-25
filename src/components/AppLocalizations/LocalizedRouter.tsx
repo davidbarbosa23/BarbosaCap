@@ -1,7 +1,7 @@
 import React, { ComponentClass, FC } from 'react';
 import { IntlProvider } from 'react-intl';
 import { Route, Redirect } from 'react-router-dom';
-import { AppLanguage } from 'constant/app-languages';
+import { AppLanguages } from 'constant/app-languages';
 
 import { LanguageStrings } from 'config/i18n';
 
@@ -9,14 +9,14 @@ interface Props {
   RouterComponent: ComponentClass;
   languages: { [k: number]: string };
   appStrings: { [prop: string]: LanguageStrings };
-  defaultLanguage?: AppLanguage;
+  defaultLanguage?: AppLanguages;
 }
 
 const LocalizedRouter: FC<Props> = ({
   children,
   RouterComponent,
   appStrings,
-  defaultLanguage = AppLanguage.English,
+  defaultLanguage = AppLanguages.English,
 }) => (
   <RouterComponent>
     <Route path="/:lang([a-zA-Z]{2})">

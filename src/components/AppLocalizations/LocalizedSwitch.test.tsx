@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions, RenderResult, screen } from '@testing-library/react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { AppLanguage } from 'constant/app-languages';
+import { AppLanguages } from 'constant/app-languages';
 
 import LocalizedRouter from 'components/AppLocalizations/LocalizedRouter';
 import LocalizedSwitch from 'components/AppLocalizations/LocalizedSwitch';
@@ -9,7 +9,7 @@ import LocalizedSwitch from 'components/AppLocalizations/LocalizedSwitch';
 import { appStrings } from 'config/i18n';
 
 const Wrapper: FC = ({ children }) => (
-  <LocalizedRouter RouterComponent={BrowserRouter} languages={AppLanguage} appStrings={appStrings}>
+  <LocalizedRouter RouterComponent={BrowserRouter} languages={AppLanguages} appStrings={appStrings}>
     <LocalizedSwitch>
       <Route exact path={undefined}>
         {children}
